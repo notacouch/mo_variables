@@ -8,7 +8,7 @@ class Mo_variables_ext
 	public $description = 'Adds many useful global variables and conditionals to use in your templates.';
 	public $settings_exist = 'y';
 	public $docs_url = 'https://git.io/mo';
-	
+
 	protected $defaults = array(
 		'ajax',
 		'secure',
@@ -24,6 +24,7 @@ class Mo_variables_ext
 		'current_url',
 		'member_variables',
 		'member_group_conditionals',
+		'user_agent',
 	);
 	
 	protected $template_data = '';
@@ -577,6 +578,16 @@ class Mo_variables_ext
 				}
 			}
 		}
+	}
+	
+	/**
+	 * Set the {user_agent} variable
+	 * 
+	 * @return void
+	 */
+	protected function user_agent()
+	{
+		$this->set_global_var('user_agent', $this->EE->input->user_agent());		
 	}
 	
 	//for legacy purposes, so we don't break updates

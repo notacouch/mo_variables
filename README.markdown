@@ -26,6 +26,7 @@ Adds many useful early-parsed global variables and conditionals to use in your t
 * Current Page URL: {current_url}, {uri_string}
 * Early-parsed Member Variables (for use as tag paramters): {logged_in_member_id}, {logged_in_group_id}, {logged_in_username}, {logged_in_screen_name}, {logged_in_email}
 * Early-parsed Member Group Conditionals: {if in_group(1|2|3)}, {if not_in_group(1|2|3)}
+* User Agent: {user_agent}
 
 ## Change Log
 

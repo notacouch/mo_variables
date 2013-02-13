@@ -2,7 +2,7 @@
 
 $lang = array(
 	'ajax' => 'Add Ajax Detect Conditional: {if ajax}, {if not_ajax}',
-	'secure' => 'Add Secure SSL/HTTPS Conditional and Variable: {if secure}, {if not_secure}, {secure_site_url}, {insecure_site_url}',
+	'secure' => 'Add Secure SSL/HTTPS Conditional and Variable: {if secure}, {if not_secure}, {secure_site_url}',
 	'get' => 'Add GET: {get:your_key}',
 	'get_post' => 'Add GET and POST: {get_post:your_key}',
 	'post' => 'Add POST: {post:your_key}',
@@ -15,4 +15,5 @@ $lang = array(
 	'current_url' => 'Add Current URL: {current_url}, {uri_string}',
 	'member_variables' => 'Early-parsed Member Variables (for use as tag paramters): {logged_in_member_id}, {logged_in_group_id}, {logged_in_username}, {logged_in_screen_name}, {logged_in_email}',
 	'member_group_conditionals' => 'Early-parsed Member Group Conditionals: {if in_group(1|2|3)}, {if not_in_group(1|2|3)}',
+	'user_agent' => 'Add User Agent: {user_agent}',
 );
