@@ -98,6 +98,20 @@ etc.
 etc.
 ```
 
+#### Segments Split by Filename and Extension
+
+```
+{segment_1_filename}
+
+{segment_1_ext}
+
+{segment_2_filename}
+
+{segment_2_ext}
+
+etc.
+```
+
 #### Pagination Detect Conditional, Page Offset and Pagination Base URL/URI
 
 ```

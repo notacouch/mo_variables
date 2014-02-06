@@ -16,6 +16,7 @@ $lang = array(
 	'page_tracker' => 'Add Page Tracker: {last_page_visited}, {two_pages_ago}, {three_pages_ago}, {four_pages_ago}, {five_pages_ago}',
 	'reverse_segments' => 'Add Reverse Segments: {rev_segment_1}, {rev_segment_2}, etc.',
 	'segments_from' => 'Add Segments Starting From X: {segments_from_1}, {segments_from_2}, etc.',
+	'segments_ext' => 'Add Segments Split by Filename and Extension: {segment_1_filename}, {segment_1_ext}, {segment_2_filename}, {segment_2_ext}, etc.',
 	'paginated' => 'Add Pagination Detect Conditional, Page Offset and Pagination Base URL (the current URL sans pagination segment): {if paginated}, {page_offset}, {pagination_base_url}',
 	'archive' => 'Add Archive Detect Conditional (detects presence of year, month, date in URI): {if archive}, {if yearly_archive}, {if monthly_archive}, {if daily_archive}, {if not_archive}, {if not_yearly_archive}, {if not_monthly_archive}, {if not_daily_archive}',
 	'categorized' => 'Add Category Detect Conditional (detects presence of reserved category work in URI): {if categorized}',

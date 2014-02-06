@@ -25,6 +25,7 @@ class Mo_variables_ext
 		'page_tracker',
 		'reverse_segments',
 		'segments_from',
+		'segments_ext',
 		'paginated',
 		'archive',
 		'categorized',
@@ -604,6 +605,29 @@ class Mo_variables_ext
 		for ($i = 1; $i <= 12; $i++)
 		{
 			$this->set_global_var('segments_from_'.$i, implode('/', array_slice($this->EE->uri->segment_array(), $i-1, count($this->EE->uri->segment_array()), TRUE)));
+		}
+	}
+
+	/**
+	 * Set the {segment_X_filename} and {segment_X_ext} variables
+	 * 
+	 * @return void
+	 */
+	protected function segments_ext()
+	{
+		for ($i = 1; $i <= 12; $i++)
+		{
+		  $segment    = $this->EE->uri->segment($i, '');
+		  $filename   = $segment;
+		  $ext        = '';
+		  $dot        = strrpos($segment, '.');
+		  if ( $dot !== FALSE )
+		  {
+  		  $filename = substr($segment, 0, $dot);
+  		  $ext      = substr($segment, $dot + 1);
+		  }
+			$this->set_global_var('segment_'.$i.'_filename', $filename);
+			$this->set_global_var('segment_'.$i.'_ext', $ext);
 		}
 	}
 	
