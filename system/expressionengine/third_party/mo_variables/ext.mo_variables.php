@@ -4,7 +4,7 @@ class Mo_variables_ext
 {
 	public $settings = array();
 	public $name = 'Mo\' Variables';
-	public $version = '1.1.5';
+	public $version = '1.1.6';
 	public $description = 'Adds many useful global variables and conditionals to use in your templates.';
 	public $settings_exist = 'y';
 	public $docs_url = 'https://git.io/mo';
@@ -34,6 +34,7 @@ class Mo_variables_ext
 		'member_variables',
 		'member_group_conditionals',
 		'member_id_conditionals',
+		'mobile_detect',
 		'user_agent',
 	);
 
@@ -60,7 +61,7 @@ class Mo_variables_ext
 		
 		foreach ($this->defaults as $key)
 		{
-			if (strncmp($key, 'defaults_', 8) !== 0)
+			if (strncmp($key, 'defaults_', 9) !== 0)
 			{
 				$settings[$key] = '1';
 			}
@@ -670,6 +671,26 @@ class Mo_variables_ext
 			
 			$this->set_global_var('logged_in_'.$key, $value);
 		}
+	}
+
+	/**
+	 * Early-parsed conditionals for mobile detection
+	 * 
+	 * @return void
+	 */
+	protected function mobile_detect()
+	{
+		//Load the Mobile Detect Class
+		$this->EE->load->library( 'Mobile_Detect' );
+		
+		$this->set_global_var('is_tablet', $this->EE->mobile_detect->isTablet());
+		$this->set_global_var('is_not_tablet', ! $this->EE->mobile_detect->isTablet());
+
+		$this->set_global_var('is_mobile', $this->EE->mobile_detect->isMobile());
+		$this->set_global_var('is_not_mobile', ! $this->EE->mobile_detect->isMobile());
+
+		$this->set_global_var('is_phone', $this->EE->mobile_detect->isMobile() && ! $this->EE->mobile_detect->isTablet());
+		$this->set_global_var('is_not_phone', ! ($this->EE->mobile_detect->isMobile() && ! $this->EE->mobile_detect->isTablet()));
 	}
 	
 	/**

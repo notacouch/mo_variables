@@ -25,5 +25,6 @@ $lang = array(
 	'member_variables' => 'Early-parsed Member Variables (for use as tag paramters): {logged_in_member_id}, {logged_in_group_id}, {logged_in_username}, {logged_in_screen_name}, {logged_in_email}',
 	'member_group_conditionals' => 'Early-parsed Member Group Conditionals: {if in_group(1|2|3)}, {if not_in_group(1|2|3)}',
 	'member_id_conditionals' => 'Early-parsed Member ID Conditionals: {if has_member_id(1|2|3)}, {if not_has_member_id(1|2|3)}',
+	'mobile_detect' => 'Early-parsed Mobile Detection Conditionals: {if is_mobile}, {if is_not_mobile}, {if is_tablet}, {if is_not_tablet}, {if is_phone}, {if is_not_phone}',
 	'user_agent' => 'Add User Agent: {user_agent}',
 );
